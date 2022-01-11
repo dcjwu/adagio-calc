@@ -1,0 +1,156 @@
+@import "vars";
+@import "mixins";
+
+.find {
+  &__header {
+    padding: 1.5rem 0;
+    text-align: center;
+    background-color: rgba($black, .2);
+  }
+
+  &-header {
+    display: flex;
+    align-items: center;
+    @include breakpointMax($tablet-min-br) {
+      justify-content: center;
+    }
+
+    & > h2 {
+      margin-right: 2rem;
+      font-size: 2rem;
+      font-weight: 300;
+    }
+  }
+
+  &-item {
+    margin: 2rem 0;
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    & > small {
+      margin: 1rem 0;
+      display: block;
+      font-size: 1.4rem;
+      font-weight: 300;
+      @include breakpointMax($tablet-min-br) {
+        text-align: center;
+      }
+    }
+  }
+
+  &-calc--wrapper {
+    display: flex;
+    align-items: center;
+    @include breakpointMax($tablet-min-br) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &-select {
+    display: flex;
+    flex-direction: column;
+    @include breakpointMax($tablet-min-br) {
+      width: 100%;
+      justify-content: space-evenly;
+      flex-direction: row;
+    }
+
+    & select {
+      width: 18rem;
+      margin: 1rem 0;
+      padding: 1rem;
+      font-size: 1.7rem;
+      font-weight: 300;
+      text-align: center;
+      @include breakpointMax($tablet-min-br) {
+        margin: 0;
+      }
+      @include breakpointMax($mobile-min-br) {
+        width: 14rem;
+        font-size: 1.35rem;
+      }
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &-result {
+    margin-left: 3rem;
+    display: flex;
+    align-items: center;
+    @include breakpointMax($tablet-min-br) {
+      margin: 2rem 0 0 0;
+    }
+    @include breakpointMax($mobile-mid-br) {
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.result {
+  &-item {
+    padding: 1rem;
+    margin: 0 1rem;
+    background-color: $rose;
+    border-radius: 2rem;
+    &.darken {
+      background-color: rgba($rose-d, .9)
+    }
+    @include breakpointMax($mobile-mid-br) {
+      padding: .5rem;
+      margin: .2rem;
+      flex: 45%
+    }
+    @include breakpointMax($mobile-min-br) {
+      padding: 0;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &-name {
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 1.8rem;
+  }
+
+  &-value {
+    text-align: center;
+    & > span {
+      @include breakpointMax($mobile-mid-br) {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+
+.btn {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  background-color: rgba($rose, .8);
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  transition: all .2s linear;
+
+  &:hover,
+  &:focus,
+  &:disabled {
+    color: $white;
+    background-color: $black;
+  }
+}

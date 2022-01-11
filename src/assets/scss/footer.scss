@@ -1,0 +1,48 @@
+@import "vars";
+@import "mixins";
+
+.footer {
+  padding: 12rem 0;
+  margin-top: 5rem;
+  background-image: url(../images/footer.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  @include breakpointMax($tablet-min-br) {
+    padding: 10rem 0;
+  }
+  @include breakpointMax($mobile-mid-br) {
+    padding: 8rem 0;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__icons i {
+    margin: 0 2rem;
+    font-size: 3rem;
+    color: $gold;
+    transition: color .2s linear;
+    &:hover,
+    &:focus {
+      color: $white;
+    }
+  }
+  &__rights {
+    padding: 3rem 0;
+    background-color: rgba($black, .25);
+    color: $white;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    & h5 {
+      font-size: 1.5rem;
+      font-weight: 300;
+      letter-spacing: .05rem;
+    }
+  }
+}

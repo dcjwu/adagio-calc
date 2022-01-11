@@ -1,0 +1,16 @@
+.lang {
+  &-wrapper {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 6rem;
+    left: 4.5rem;
+    z-index: 999;
+  }
+  &-link {
+    margin: 0 1rem;
+    & img {
+      width: 2rem;
+    }
+  }
+}
