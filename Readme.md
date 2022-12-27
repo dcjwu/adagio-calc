@@ -1,10 +1,11 @@
-# [Calculator](https://adagio.lv/sizes/) for Adagio Online Store #
-#### November 2021 ####
----
-## Implemented bra and bottom size calculator. ##
-#### What I used: ####
-- [Gulp](https://gulpjs.com/)
+#### Context:
+__November 2021.__ After developing WordPress online shop, client asked to add custom lingerie size calculator. As in WP there was no option which matched client needs, I developed one from scratch.
 
----
-### Status: ####
-_Calculator is finished._
+#### Technologies used:
+- Gulp
+- HTML
+- SASS
+- JavaScript
+
+#### Status:
+Calculator is finished.
